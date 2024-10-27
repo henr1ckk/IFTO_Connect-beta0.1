@@ -1,0 +1,114 @@
+@charset "UTF- 8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    background-color: white;
+    height: 100%;
+    font-weight: bold;
+    overflow-x: hidden;
+    background-color: rgb(32,33,36);
+}
+header{
+    padding: 20px 0;
+    height: 80px;
+    margin-bottom: 10%;
+}
+nav{
+    padding: 0 2%;
+    text-align: right;
+}
+ul{
+    list-style: none;
+}
+li{
+    padding:  8px;
+    margin: 0px;
+    right: 100%;
+}
+a{
+    padding: 8px;
+    color: white;
+    text-decoration: none;
+    margin-top: 0%;
+    opacity: 50%;
+}
+a:hover{
+    opacity: 100%;
+}
+.sair:hover{
+    opacity: 100%;
+}
+.sair{
+    color: red;
+    margin-left: 3%;
+    opacity: 50%;
+}
+.aviso{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+    margin-top: 0%;
+    font-weight: normal;
+    opacity: 60%;
+}
+.post{
+    border: #888 solid 1px;
+    padding: 10px;
+    border-radius: 8px;
+    text-align: justify;
+    display: table; 
+    background-size: auto; 
+    background-repeat: no-repeat; 
+    background-position: center;
+    color: white;
+    margin:auto;
+    margin-top: 20px;
+    background-color:  rgb(23,23,23);
+}
+.conteudo {
+    margin-bottom: 10px;
+    border-radius: 1px black solid;
+    width: 500px;
+    margin: auto;
+    color: white;
+    font-size: 18px;
+    font-weight: normal;
+    display: block;
+    left: 90%;
+}
+.hora {
+    color: #888;
+    font-size: 12px;
+}
+h2{
+    text-align: left;
+    margin-left: 0%;
+    color: lightskyblue;
+    left: 100%;
+    margin-bottom: 15px;
+}
+.ex{
+    color: red;
+}
+.acoes{
+    margin: auto;
+    margin-left: 870px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+}
+h3{
+    text-align: left;
+    margin-left: 0%;
+    color: rgb(255, 255, 255);
+    left: 100%;
+    margin-bottom: 15px;
+}

@@ -1,0 +1,112 @@
+@charset "UTF- 8";
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif, Geneva, Tahoma, sans-serif;
+    background-color: white;
+    height: 100%;
+    font-weight: bold;
+    overflow-y: hidden;
+    background-color: rgb(32,33,36);
+}
+div{
+    padding-top: 30px;
+    text-align: center;
+    margin: auto;
+    margin-bottom: 30px;
+    margin-top: 50px;
+    color: white;
+    background-color:rgb(23,23,23);
+    width: 330px;
+    height: 350px;
+    border-radius: 10px;
+}
+a{
+    color: rgb(122, 125, 129);
+    padding: 6px;
+    width: 100px;
+    height: 25px;
+    margin-top: 30px;
+    font-size: 16px;
+    background-color: transparent; 
+    margin-bottom: 30px;
+    border-radius: 5px;
+    margin: auto;
+    text-decoration: none;
+    border: solid 2px transparent;
+    margin-right: 8px;
+}
+a:hover{
+    border-radius: 5px;
+    color: white;
+}
+label{
+    display: inline-block;
+    width: 150px;
+    text-align: center;
+}
+input{
+    display: inline-block;
+    width: 200px;
+    height: 30px;
+    padding: 8px;
+    border: 0;
+    border-radius: 3px;
+    font-size: 16px;
+    margin: 20px;
+    margin-top: 20px;
+    background-color:  rgb(23,23,23);
+    color: white;
+    border-bottom: 1px solid white;
+}
+input::placeholder{
+    color: white;
+    opacity: 50%;
+}
+form{
+    width: 250px;
+    height: 180px;
+    padding: 1px;
+    margin: auto;
+    margin-top: 20px;
+}
+.aviso{
+    width: 200px;
+    height: 40px;
+    text-align: center;
+    border-radius: 8px;
+    margin: auto;
+    margin-top: 50px;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+.button{
+    color: white;
+    width: 100px;
+    height: 40px;
+    font-size: 16px;
+    border: 2px white solid;
+    background-color: transparent;
+    font-weight: bold;
+    margin: 40px auto;
+    border-radius: 5px;
+}
+.button:hover{
+    background-color: white;
+    border-radius: 5px;
+    color: black;
+    cursor: pointer;
+    border: 2px white solid;
+}
+h2{
+    text-align: center;
+    color: lightskyblue;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: auto;
+    margin-top: 60px;
+    font-size: 40px;
+}
