@@ -49,18 +49,11 @@ $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username'
             <?php
             // Consulta para exibir as postagens de alunos, professores e admins
             $sql = "
-            SELECT postagens.descricao, postagens.data, 
-                   COALESCE(alunos.nome, professores.nome, admins.nome) AS nome, 
-                   CASE 
-                     WHEN postagens.alunoid IS NOT NULL THEN 'Aluno'
-                     WHEN postagens.profid IS NOT NULL THEN 'Professor'
-                     WHEN postagens.adminsid IS NOT NULL THEN 'Admin'
-                   END AS tipo
-            FROM postagens
-            LEFT JOIN alunos ON postagens.alunoid = alunos.id
-            LEFT JOIN professores ON postagens.profid = professores.id
-            LEFT JOIN admins ON postagens.adminsid = admins.id
-            ORDER BY postagens.data DESC";
+            SELECT postagens.*, 
+                COALESCE(usuarios.nome) AS nome, usuarios.nivel AS nivel 
+                FROM postagens 
+                LEFT JOIN usuarios ON postagens.usuarioid = usuarios.id
+                ORDER BY postagens.data DESC;";
 
             $result = mysqli_query($conect, $sql);
 
@@ -68,7 +61,7 @@ $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username'
             if (mysqli_num_rows($result) > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     echo '<div class="post">';
-                    echo '<p class="name">@' . htmlspecialchars($row['nome']) . ' (' . htmlspecialchars($row['tipo']) . ')</p>';
+                    echo '<p class="name">@' . htmlspecialchars($row['nome']) .  '(' . htmlspecialchars($row['nivel']) . ') </p>';
                     echo '<p class="conteudo">' . htmlspecialchars($row['descricao']) . '</p>';
                     echo '<p class="hora">' . tempoDesde($row['data']) . '</p>'; // Usa a função para formatar a data
                     echo '</div>';

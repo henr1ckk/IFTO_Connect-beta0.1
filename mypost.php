@@ -51,17 +51,16 @@ $username = isset($_SESSION['username']) ? htmlspecialchars($_SESSION['username'
     
     // SQL para buscar apenas as postagens do usuário logado
     $sql = "SELECT postagens.*, 
-            COALESCE(alunos.nome, professores.nome, admins.nome) AS nome 
+            COALESCE(usuarios.nome) AS nome, usuarios.nivel AS nivel 
             FROM postagens 
-            LEFT JOIN alunos ON postagens.alunoid = alunos.id 
-            LEFT JOIN professores ON postagens.profid = professores.id 
-            LEFT JOIN admins ON postagens.adminsid = admins.id 
+            LEFT JOIN usuarios ON postagens.usuarioid = usuarios.id
             WHERE 
-            (postagens.alunoid = $iduser OR postagens.profid = $iduser OR postagens.adminsid = $iduser) 
-            ORDER BY postagens.data DESC";
+            (postagens.usuarioid = $iduser)
+            ORDER BY postagens.data DESC;";
 
     $result = mysqli_query($conect, $sql);
     
+    // 
     if ($result && mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_assoc($result)) {
             // Removeu a verificação aqui pois a consulta já filtra por id do usuário
